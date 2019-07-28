@@ -1,2 +1,4 @@
 # scrappy_news
-news scrapper
+This is a simple news scrapper
+
+![](images/screen.jpg)

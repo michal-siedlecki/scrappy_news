@@ -18,12 +18,14 @@
     <div class="wrapper">
         <div class="header"><h1>scrappy news</h1></div>
 
-        {% for feed in feed_list %}
-            {% for news in feed %}
+        {% for feed in titles_links %}
 
-                <div>{{ news }}</div>
-
+            {% for title,link in feed.items() %}
+                <div>{{ title }}</div>
+                <div>{{ link }}</div>
+                
             {% endfor %}
+
         {% endfor %}
     </div>
         <!-- Optional JavaScript -->

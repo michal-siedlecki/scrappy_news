@@ -6,23 +6,24 @@
         margin: 1em;
       }
 
-.div, header{
+.a, header{
 
     background: #eee;
 	padding:1em;
-	border-radius: 10px;
+    border-radius: 10px;
+    text-decoration: none;
 
 }
 
 
-.wrapper > div{
+.wrapper > a{
 					background: #eee;
 					padding:1em;
 					border-radius: 10px;
 
 			}
 
-.wrapper > div:nth-child(odd){
+.wrapper > a:nth-child(odd){
 				background:#ddd;
 			}
 

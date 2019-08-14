@@ -20,10 +20,8 @@
 
         {% for feed in titles_links %}
 
-            {% for title,link in feed.items() %}
-                <div>{{ title }}</div>
-                <div>{{ link }}</div>
-                
+            {% for title,odnosnik in feed.items() %}
+                <a href="{{ odnosnik }}"><div>{{ title }}</div></a>             
             {% endfor %}
 
         {% endfor %}

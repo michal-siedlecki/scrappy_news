@@ -4,6 +4,8 @@ from bs4 import BeautifulSoup
 
 app = Flask(__name__)
 news_num = 3
+
+
 class Feed:
     def __init__(self, name, url):
         self.name = name
@@ -26,9 +28,6 @@ class Feed:
                         onet_dic[article.find(class_="title").text] = article.attrs.get('href')
                     else:
                         return onet_dic
-           
-        
-        
         
         if self.name == 'Wirtualna Polska':
             divs = soup.find_all(class_="sc-1fu2hk8-0 jIlknD")
@@ -44,7 +43,6 @@ class Feed:
                     else:
                         return wp_dic
                     
-        
         if self.name == 'W Polityce':
             divs = soup.find_all(class_="nu-lead-articles") + soup.find_all(class_="nu-tile-container nu-main-col--5")
             articles_sets = [div.find_all('a') for div in divs]
@@ -61,10 +59,7 @@ onet = Feed('Onet', 'https://www.onet.pl/')
 wp = Feed('Wirtualna Polska', 'https://www.wp.pl/')
 wpolityce = Feed('W Polityce', 'https://wpolityce.pl/')
 
-feed_dic_list = [onet, wp, wpolityce]
-
-
-
+feed_list = [onet, wp, wpolityce]
 
 
 @app.route("/")
@@ -72,7 +67,7 @@ feed_dic_list = [onet, wp, wpolityce]
 def info():
 
     titles_links = []
-    for feed in feed_dic_list:
+    for feed in feed_list:
         titles_links.append(feed.getHeaders())    
         
     
@@ -82,5 +77,4 @@ def info():
 if __name__ == '__main__':
 
     app.run(debug=True)
-    
-
+   

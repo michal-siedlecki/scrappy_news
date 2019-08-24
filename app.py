@@ -60,21 +60,23 @@ wp = Feed('Wirtualna Polska', 'https://www.wp.pl/')
 wpolityce = Feed('W Polityce', 'https://wpolityce.pl/')
 
 feed_list = [onet, wp, wpolityce]
+for feed in feed_list:
 
+    print(feed.getHeaders())
 
-@app.route("/")
-@app.route("/home")
-def info():
+# @app.route("/")
+# @app.route("/home")
+# def info():
 
-    titles_links = []
-    for feed in feed_list:
-        titles_links.append(feed.getHeaders())    
+#     titles_links = []
+#     for feed in feed_list:
+#         titles_links.append(feed.getHeaders())    
         
     
-    return render_template('home.html', titles_links=titles_links)
+#     return render_template('home.html', titles_links=titles_links)
 
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
 
-    app.run(debug=True)
+#     app.run(debug=True)
    

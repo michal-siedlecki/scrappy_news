@@ -1,1 +1,5 @@
 .ipynb_checkpoints/ml_news_cluster-checkpoint.ipynb
+myenv/
+.idea/
+.vscode/
+

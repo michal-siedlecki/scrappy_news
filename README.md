@@ -1,6 +1,9 @@
 # Scrappy news
-This is a simple news scrapper with a machine learning algorythm for news header categorize. This is beta version. 
-it has been uploaded as beta version. You can try it [HERE](https://scrappynews.herokuapp.com/)
+This is a simple news scrapper with a machine learning algorythm for news header categorize. It has been uploaded as a beta version. 
+
+
+You can try it [HERE](https://scrappynews.herokuapp.com/)
+
 
 ### How it works?
 * First it looks into Https://newsapi.org API to get some top news from Poland. Method gets header title and url. 

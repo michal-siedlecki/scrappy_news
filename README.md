@@ -11,6 +11,16 @@ You can try it [HERE](https://scrappynews.herokuapp.com/)
 * This results obtaining an encoded vectors for each header title. 
 * Now encoded vectors can be predicted by model since they are sparse matrices
 
+In details:
+* [training model process](https://github.com/michal-siedlecki/scrappy_news/blob/master/train_scripts/train_model.ipynb)
+
+
 
 ### The main and the only screen
 ![](images/screen.jpg)
+
+### Features in progress
+* Add more news categories
+* Consider stopwords removing
+* Lemmatization of headers
+* Gather more data from various sources

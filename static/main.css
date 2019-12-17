@@ -31,9 +31,11 @@ body{
     text-align: center;
 }
 
-.__label__1{background-color: #fae596;} /* sport - zolty */
-.__label__2{background-color: #3fb0ac;} /* polityka - niebieski */
-.__label__3{background-color: #173e43;}
+.__label__1{background-color: #4ABDAC;} /* sport - zolty */
+.__label__2{background-color: #FC4A1A;} /* polityka - niebieski */
+.__label__3{background-color: #F7B733;}
+.__label__4{background-color: #DFDCE3;}
+.__label__5{background-color: #173e43;}
 
 .wrapper > a:hover {
 	opacity:0.8;

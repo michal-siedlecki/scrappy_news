@@ -7,17 +7,20 @@ model = loaded_model = pickle.load(open('finalized_model.sav', 'rb'))
 cv = pickle.load(open('count_vectorizer.sav', 'rb'))
 app = Flask(__name__)
 
-apiKey = os.environ['apiKey']
+
 
 parameters = {
     'country' : 'pl',
-    'apiKey' : apiKey
+    'apiKey' : '57a2030723934ee69c14205829d6c300'
 }
 
 
 def getLabel(header):
     header_cv = cv.transform([header])
+    print(header_cv)
+    print(header_cv.toarray())
     return model.predict(header_cv)
+
 
 
 def getNews():
@@ -31,6 +34,9 @@ def getNews():
         news.append((title, url, label))
     return news
 
+getNews()
+
+
 @app.route("/")
 @app.route("/home")
 def info():
@@ -42,3 +48,4 @@ def info():
 if __name__ == '__main__':
 
     app.run(debug=False)
+

@@ -1,1 +1,1 @@
-/usr/lib/python3.6/copyreg.py
+E:/usr/lib/python3.6/copyreg.py
